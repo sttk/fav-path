@@ -1,6 +1,6 @@
 {
   "name": "@fav/path",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Provides same behaviors of `path` module for all versions of node.js and enhanced features related to file path",
   "main": "index.js",
   "scripts": {
