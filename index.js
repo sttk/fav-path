@@ -4,7 +4,7 @@ var path = require('path');
 
 var apis = [
   { name: 'basename', body: require('./lib/basename') },
-//  'delimiter',
+  'delimiter',
 //  'dirname',
 //  'extname',
 //  'format',
@@ -14,7 +14,7 @@ var apis = [
 //  'parse',
 //  'relative',
 //  'resolve',
-//  'sep',
+  'sep',
 ];
 
 var pathing = {};

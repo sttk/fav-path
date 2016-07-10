@@ -1,9 +1,7 @@
-@fav/path.basename
-================
+@fav/path.basename [![NPM version][npm-image]][npm-url]
+==================
 
 Provides same behaviors of `path.basename` module for all versions of node.js
-
-[![NPM][npm-image]][npm-url]
 
 Install
 -------
@@ -71,7 +69,7 @@ Copyright (C) 2016 Takayuki Sato
 This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.
 
-[npm-image]: https://nodei.co/npm/@fav/path.basename.png
-[npm-url]: https://nodei.co/npm/@fav/path.basename/
+[npm-image]: http://img.shields.io/badge/npm-v0.1.0-blue.svg
+[npm-url]: https://www.npmjs.org/package/@fav/path/
 [mit-url]: https://opensource.org/licenses/MIT
 
