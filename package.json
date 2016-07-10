@@ -1,0 +1,31 @@
+{
+  "name": "@fav/path",
+  "version": "0.1.0",
+  "description": "Provides same behaviors of `path` module for all versions of node.js and enhanced features related to file path",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttk/fav-path.git"
+  },
+  "keywords": [
+    "path",
+    "file"
+  ],
+  "author": "Takayuki Sato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttk/fav-path/issues"
+  },
+  "homepage": "https://github.com/sttk/fav-path#readme",
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "testrun": "^0.7.0"
+  }
+}

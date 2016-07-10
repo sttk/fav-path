@@ -1,0 +1,23 @@
+{
+  "name": "@fav/path.basename",
+  "version": "0.1.0",
+  "description": "Provides same behaviors of `path.basename` module for all versions of node.js",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttk/fav-path.git"
+  },
+  "keywords": [
+    "basename",
+    "path",
+    "file"
+  ],
+  "author": "Takayuki Sato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttk/fav-path/issues"
+  },
+  "homepage": "https://github.com/sttk/fav-path#readme"
+}

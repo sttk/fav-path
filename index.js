@@ -1,0 +1,47 @@
+'use strict';
+
+var path = require('path');
+
+var apis = [
+  { name: 'basename', body: require('./lib/basename') },
+//  'delimiter',
+//  'dirname',
+//  'extname',
+//  'format',
+//  'isAbsolute',
+//  'join',
+//  'normalize',
+//  'parse',
+//  'relative',
+//  'resolve',
+//  'sep',
+];
+
+var pathing = {};
+for (var i = 0, n = apis.length; i < n; i++) {
+  define(pathing, apis[i]);
+}
+module.exports = pathing;
+
+function define(obj, api) {
+  var name;
+  var body;
+
+  if (typeof api === 'string') {
+    name = api;
+    body = path[name];
+    if (!body) {
+      body = require('./lib/' + name);
+    }
+  } else {
+    name = api.name;
+    body = api.body;
+  }
+
+  Object.defineProperty(obj, name, {
+    value: body,
+    writable: false,
+    enumerable: true,
+    configurable: false,
+  });
+}
