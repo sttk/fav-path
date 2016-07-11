@@ -5,9 +5,9 @@ var path = require('path');
 var apis = [
   { name: 'basename', body: require('./lib/basename') },
   'delimiter',
-//  'dirname',
-//  'extname',
-//  'format',
+  { name: 'dirname', body: require('./lib/dirname') },
+  { name: 'extname', body: require('./lib/extname') },
+  { name: 'format', body: require('./lib/format') },
 //  'isAbsolute',
 //  'join',
 //  'normalize',

@@ -130,7 +130,7 @@ testrun('#basename', testfn, [
           },
           {
             name: 'And path is ${testcase.path} => ${testcase.expected}',
-            path: 'aaa/bbb/ccc.dddd',
+            path: 'aaa/bbb/ccc.dddd/',
             expected: 'ccc.dddd',
           },
           {

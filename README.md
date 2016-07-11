@@ -23,7 +23,10 @@ APIs
 ----
 
 * [path.basename](./lib/basename/README.md)
-* [path.delimiter](./doc/API.md#delimiter)
+* [path.delimiter](./doc/API.md/#delimiter)
+* [path.dirname](./lib/dirname/README.md)
+* [path.extname](./lib/extname/README.md)
+* [path.format](./lib/format/README.md)
 * [path.sep](./doc/API.md#sep)
 
 
