@@ -27,6 +27,7 @@ APIs
 * [path.dirname](./lib/dirname/README.md)
 * [path.extname](./lib/extname/README.md)
 * [path.format](./lib/format/README.md)
+* [path.isAbsolute](./lib/format/README.md)
 * [path.sep](./doc/API.md#sep)
 
 

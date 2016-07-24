@@ -28,6 +28,12 @@ Returns a path string from an object.
 
 See [format/README.md](../lib/format/README.md).
 
+## #isAbsolute(path) <a name="isabsolute"></a>
+
+Checks if a file path is absolute.
+
+See [isAbsolute/README.md](../lib/isAbsolute/README.md).
+
 ## #sep <a name="sep"></a>
 
 Provides the platform-specific path delimiter. (Windows: `\`, Posix: `/`)

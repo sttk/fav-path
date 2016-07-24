@@ -8,7 +8,7 @@ var apis = [
   { name: 'dirname', body: require('./lib/dirname') },
   { name: 'extname', body: require('./lib/extname') },
   { name: 'format', body: require('./lib/format') },
-//  'isAbsolute',
+  { name: 'isAbsolute', body: require('./lib/isAbsolute') },
 //  'join',
 //  'normalize',
 //  'parse',
