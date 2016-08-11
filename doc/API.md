@@ -1,6 +1,6 @@
 # APIs of @fav/path
 
-## #basename(path)
+## #basename(path) <a name="basename"></a>
 
 Returns a basename of a file path.
 
@@ -10,7 +10,7 @@ See [basename/README.md](../lib/basename/README.md).
 
 Provides the platform-specific path delimiter. (Windows: `;`, Posix: `:`)
 
-## #dirname(path)
+## #dirname(path) <a name="dirname"></a>
 
 Returns a directory path of a file path.
 
@@ -34,7 +34,13 @@ Checks if a file path is absolute.
 
 See [isAbsolute/README.md](../lib/isAbsolute/README.md).
 
-## #sep <a name="sep"></a>
+## #join(path[, ...]) <a name="join"></a>
+
+Joins a sequence of path segments.
+
+See [join/README.md](../lib/join/README.md).
+
+## #sep <a name="seq"></a>
 
 Provides the platform-specific path delimiter. (Windows: `\`, Posix: `/`)
 

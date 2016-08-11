@@ -1,7 +1,7 @@
-@fav/path.isabsolute [![NPM version][npm-image]][npm-url]
+@fav/path.join [![NPM version][npm-image]][npm-url]
 ====================
 
-Provides same behaviors of `path.isAbsolute` module for all versions of node.js
+Provides same behaviors of `path.join` module for all versions of node.js
 
 Install
 -------
@@ -12,10 +12,10 @@ For installing `@fav/path` with npm:
 $ npm install @fav/path --save
 ```
 
-For installing only `@fav/path.isabsolute` with npm:
+For installing only `@fav/path.join` with npm:
 
 ```
-$ npm install @fav/path.isabsolute --save
+$ npm install @fav/path.join --save
 ```
 
 Usage
@@ -26,39 +26,33 @@ When installing `@fav/path`:
 ```js
 const path = require('@fav/path');
 
-path.isAbsolute('/path/to/file.txt');
-// => true
-
-path.isAbsolute('path/to/file.txt');
-// => false
+path.join('/path/to', 'foo', '..', 'file.txt');
+// => /path/to/file.txt
 ```
 
-When installing `@fav/path.isabsolute`:
+When installing `@fav/path.join`:
 
 ```js
-const isAbsolute = require('@fav/path.isabsolute');
+const join = require('@fav/path.join');
 
-isAbsolute('/path/to/file.txt');
-// => true
-
-isAbsolute('path/to/file.txt');
-// => false
+join('/path/to', 'foo', '..', 'file.txt');
+// => /path/to/file.txt
 ```
 
 API
 ---
 
-### <u>isAbsolute(path)</u>
+### <u>join(path[, ...])</u>
 
 Checks if a file path is absolute.
 
 ##### Arguments
 
-* **path** [string] : a path string.
+* **path** [string] : a sequence of path segments.
 
 ##### Errors
 
-* [TypeError] : if **path** is not a string.
+* [TypeError] : if any of the path segments is not a string.
 
 License
 -------

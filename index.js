@@ -9,7 +9,7 @@ var apis = [
   { name: 'extname', body: require('./lib/extname') },
   { name: 'format', body: require('./lib/format') },
   { name: 'isAbsolute', body: require('./lib/isAbsolute') },
-//  'join',
+  { name: 'join', body: require('./lib/join') },
 //  'normalize',
 //  'parse',
 //  'relative',
