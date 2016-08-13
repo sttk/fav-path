@@ -1,6 +1,6 @@
 {
   "name": "@fav/path.extname",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Provides same behaviors of `path.extname` module for all versions fo node.js",
   "main": "index.js",
   "scripts": {},

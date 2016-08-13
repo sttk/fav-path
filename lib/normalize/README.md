@@ -1,7 +1,7 @@
-@fav/path.isabsolute [![NPM version][npm-image]][npm-url]
-====================
+@fav/path.normalize [![NPM version][npm-image]][npm-url]
+===================
 
-Provides same behaviors of `path.isAbsolute` module for all versions of node.js
+Provides same behaviors of `path.normalize` module for all versions of node.js
 
 Install
 -------
@@ -12,10 +12,10 @@ For installing `@fav/path` with npm:
 $ npm install @fav/path --save
 ```
 
-For installing only `@fav/path.isabsolute` with npm:
+For installing only `@fav/path.normalize` with npm:
 
 ```
-$ npm install @fav/path.isabsolute --save
+$ npm install @fav/path.normalize --save
 ```
 
 Usage
@@ -26,31 +26,25 @@ When installing `@fav/path`:
 ```js
 const path = require('@fav/path');
 
-path.isAbsolute('/path/to/file.txt');
-// => true
-
-path.isAbsolute('path/to/file.txt');
-// => false
+path.normalize('/foo/bar//baz/asdf/quux/..');
+// => '/foo/bar/baz/asdf'
 ```
 
-When installing `@fav/path.isabsolute`:
+When installing `@fav/path.normalize`:
 
 ```js
-const isAbsolute = require('@fav/path.isabsolute');
+const normalize = require('@fav/path.normalize');
 
-isAbsolute('/path/to/file.txt');
-// => true
-
-isAbsolute('path/to/file.txt');
-// => false
+normalize('/foo/bar//baz/asdf/quux/..');
+// => '/foo/bar/baz/asdf'
 ```
 
 API
 ---
 
-### <u>isAbsolute(path)</u>
+### <u>normalize(path)</u>
 
-Checks if a file path is absolute.
+Normalizes the given `path`, resolving `'..'` and `'.'` segments.
 
 ##### Arguments
 

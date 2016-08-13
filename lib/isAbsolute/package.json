@@ -1,6 +1,6 @@
 {
   "name": "@fav/path.isabsolute",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Provides same behaviors of `path.isabsolute` module for all versions of node.js",
   "main": "index.js",
   "scripts": {},

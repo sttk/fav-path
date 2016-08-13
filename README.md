@@ -44,6 +44,6 @@ See the file LICENSE in this distribution for more details.
 [travis-url]: https://travis-ci.org/sttk/fav-path
 [appveyor-image]: https://ci.appveyor.com/api/projects/status/github/sttk/fav-path?branch=master&svn=true
 [appveyor-url]: https://ci.appveyor.com/project/sttk/fav-path
-[npm-image]: http://img.shields.io/badge/npm-v0.5.0-blue.svg
+[npm-image]: http://img.shields.io/badge/npm-v0.6.0-blue.svg
 [npm-url]: https://www.npmjs.org/package/@fav/path/
 [mit-url]: https://opensource.org/licenses/MIT

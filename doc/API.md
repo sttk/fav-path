@@ -40,6 +40,12 @@ Joins a sequence of path segments.
 
 See [join/README.md](../lib/join/README.md).
 
+## #normalize(path) <a name="normalize"></a>
+
+Normalizes the given `path`, resolving `'..'` and `'.'` segments.
+
+See [normalize/README.md](../lib/normalize/README.md).
+
 ## #sep <a name="seq"></a>
 
 Provides the platform-specific path delimiter. (Windows: `\`, Posix: `/`)

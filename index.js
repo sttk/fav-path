@@ -10,7 +10,7 @@ var apis = [
   { name: 'format', body: require('./lib/format') },
   { name: 'isAbsolute', body: require('./lib/isAbsolute') },
   { name: 'join', body: require('./lib/join') },
-//  'normalize',
+  { name: 'normalize', body: require('./lib/normalize') },
 //  'parse',
 //  'relative',
 //  'resolve',
