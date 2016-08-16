@@ -30,6 +30,7 @@ APIs
 * [path.isAbsolute](./lib/isAbsolute/README.md)
 * [path.join](./lib/join/README.md)
 * [path.normalize](./lib/normalize/README.md)
+* [path.parse](./lib/parse/README.md)
 * [path.sep](./doc/API.md#sep)
 
 

@@ -11,7 +11,7 @@ var apis = [
   { name: 'isAbsolute', body: require('./lib/isAbsolute') },
   { name: 'join', body: require('./lib/join') },
   { name: 'normalize', body: require('./lib/normalize') },
-//  'parse',
+  { name: 'parse', body: require('./lib/parse') },
 //  'relative',
 //  'resolve',
   'sep',

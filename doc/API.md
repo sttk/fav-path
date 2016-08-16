@@ -46,6 +46,12 @@ Normalizes the given `path`, resolving `'..'` and `'.'` segments.
 
 See [normalize/README.md](../lib/normalize/README.md).
 
+## #parse(path) <a name="parse"></a>
+
+Parses the `path` string and returns the result object which has the path elements as its properties.
+
+See [parse/README.md](../lib/parse/README.md).
+
 ## #sep <a name="seq"></a>
 
 Provides the platform-specific path delimiter. (Windows: `\`, Posix: `/`)
