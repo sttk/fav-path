@@ -1,5 +1,5 @@
 {
-  "name": "@fav/path.normalize",
+  "name": "@fav/path.parse",
   "version": "0.7.0",
   "description": "Provides same behaviors of `path.parse` module for all versions of node.js",
   "main": "index.js",

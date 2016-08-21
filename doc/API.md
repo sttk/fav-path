@@ -1,58 +1,68 @@
 # APIs of @fav/path
 
-## #basename(path) <a name="basename"></a>
+<a name="basename"></a>
+## #basename(path)
 
 Returns a basename of a file path.
 
 See [basename/README.md](../lib/basename/README.md).
 
-## #delimiter <a name="delimiter"></a>
+<a name="delimiter"></a>
+## #delimiter
 
 Provides the platform-specific path delimiter. (Windows: `;`, Posix: `:`)
 
-## #dirname(path) <a name="dirname"></a>
+<a name="dirname"></a>
+## #dirname(path)
 
 Returns a directory path of a file path.
 
 See [dirname/README.md](../lib/dirname/README.md).
 
-## #extname(path) <a name="extname"></a>
+<a name="extname"></a>
+## #extname(path)
 
 Returns an extension of a file path. 
 
 See [extname/README.md](../lib/extname/README.md).
 
-## #format(pathObject) <a name="format"></a>
+<a name="format"></a>
+## #format(pathObject)
 
 Returns a path string from an object.
 
 See [format/README.md](../lib/format/README.md).
 
-## #isAbsolute(path) <a name="isabsolute"></a>
+<a name="isabsolute"></a>
+## #isAbsolute(path)
 
 Checks if a file path is absolute.
 
 See [isAbsolute/README.md](../lib/isAbsolute/README.md).
 
-## #join(path[, ...]) <a name="join"></a>
+<a name="join"></a>
+## #join(path[, ...])
 
 Joins a sequence of path segments.
 
 See [join/README.md](../lib/join/README.md).
 
-## #normalize(path) <a name="normalize"></a>
+<a name="normalize"></a>
+## #normalize(path)
 
 Normalizes the given `path`, resolving `'..'` and `'.'` segments.
 
 See [normalize/README.md](../lib/normalize/README.md).
 
-## #parse(path) <a name="parse"></a>
+<a name="parse"></a>
+## #parse(path)
 
 Parses the `path` string and returns the result object which has the path elements as its properties.
 
 See [parse/README.md](../lib/parse/README.md).
 
-## #sep <a name="seq"></a>
+<a name="sep"></a>
+## #sep
 
-Provides the platform-specific path delimiter. (Windows: `\`, Posix: `/`)
+Provides the platform-specific path separator. (Windows: `\`, Posix: `/`)
 

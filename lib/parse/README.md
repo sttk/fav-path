@@ -41,7 +41,7 @@ When installing `@fav/path.parse`:
 ```js
 const parse = require('@fav/path.parse');
 
-path.parse('/path/to/file.txt');
+parse('/path/to/file.txt');
 // => {
 //      root: '/',
 //      dir: '/path/to',
