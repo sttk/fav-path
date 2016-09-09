@@ -61,6 +61,13 @@ Parses the `path` string and returns the result object which has the path elemen
 
 See [parse/README.md](../lib/parse/README.md).
 
+<a name="relative"></a>
+## #relative(from, to)
+
+Returns a relative path from `from` to `to`.
+
+See [relative/README.md](../lib/relative/README.md).
+
 <a name="sep"></a>
 ## #sep
 

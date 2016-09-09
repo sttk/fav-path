@@ -12,7 +12,7 @@ var apis = [
   { name: 'join', body: require('./lib/join') },
   { name: 'normalize', body: require('./lib/normalize') },
   { name: 'parse', body: require('./lib/parse') },
-//  'relative',
+  { name: 'relative', body: require('./lib/relative') },
 //  'resolve',
   'sep',
 ];

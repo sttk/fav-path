@@ -1,7 +1,7 @@
 {
-  "name": "@fav/path.parse",
+  "name": "@fav/path.relative",
   "version": "0.8.0",
-  "description": "Provides same behaviors of `path.parse` module for all versions of node.js",
+  "description": "Provides same behaviors of `path.relative` module for all versions of node.js",
   "main": "index.js",
   "scripts": {},
   "repository": {
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/sttk/fav-path.git"
   },
   "keywords": [
-    "parse",
+    "relative",
     "path",
     "file"
   ],
@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/sttk/fav-path/issues"
   },
-  "homepage": "https://github.com/sttk/fav-path#readme",
-  "dependencies": {
-    "semver": "^5.3.0"
-  }
+  "homepage": "https://github.com/sttk/fav-path#readme"
 }

@@ -6,7 +6,7 @@ var testrun = require('testrun').mocha;
 
 var testcases = [
   {
-    name: 'When argument type is not atring',
+    name: 'When argument type is not a string',
     cases: [
       {
         name: 'And path is ${testcase.path} => ${testcase.error}',
