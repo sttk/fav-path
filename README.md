@@ -32,6 +32,7 @@ APIs
 * [path.normalize](./lib/normalize/README.md)
 * [path.parse](./lib/parse/README.md)
 * [path.relative](./lib/relative/README.md)
+* [path.resolve](./doc/API.md#resolve)
 * [path.sep](./doc/API.md#sep)
 
 

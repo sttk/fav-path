@@ -68,6 +68,11 @@ Returns a relative path from `from` to `to`.
 
 See [relative/README.md](../lib/relative/README.md).
 
+<a name="resolve"></a>
+## #resolve(path[, ...])
+
+Resolves a sequence of path segments into an absolute path.
+
 <a name="sep"></a>
 ## #sep
 
