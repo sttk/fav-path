@@ -13,7 +13,7 @@ var apis = [
   { name: 'normalize', body: require('./lib/normalize') },
   { name: 'parse', body: require('./lib/parse') },
   { name: 'relative', body: require('./lib/relative') },
-  'resolve',
+  { name: 'resolve', body: require('./lib/resolve') },
   'sep',
 ];
 

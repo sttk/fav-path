@@ -33,7 +33,7 @@ path.relative('path/to/aaa/bbb', 'path/to/ccc/ddd')
 When installing `@fav/path.relative`:
 
 ```js
-const relative = require('@fav/path');
+const relative = require('@fav/path.relative');
 
 relative('path/to/aaa/bbb', 'path/to/ccc/ddd')
 // => '../../ccc/ddd'
