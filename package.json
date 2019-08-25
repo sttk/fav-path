@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/sttk/fav-path#readme",
   "devDependencies": {
-    "eslint": "^3.0.1",
+    "eslint": "^6.2.2",
     "istanbul": "^0.4.4",
     "mocha": "^2.5.3",
     "testrun": "^0.7.0"
