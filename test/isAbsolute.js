@@ -303,13 +303,13 @@ var testcases = [
 ];
 
 
-function testfn_path_isAbsolute(testcase) {
+function testfnPathIsAbsolute(testcase) {
   return path.isAbsolute(testcase.path);
 }
 
-function testfn_isAbsolute(testcase) {
+function testfnIsAbsolute(testcase) {
   return isAbsolute(testcase.path);
 }
 
-testrun('#isAbsolute (path.isAbsolute)', testfn_path_isAbsolute, testcases);
-testrun('#isAbsolute (isAbsolute)', testfn_isAbsolute, testcases);
+testrun('#isAbsolute (path.isAbsolute)', testfnPathIsAbsolute, testcases);
+testrun('#isAbsolute (isAbsolute)', testfnIsAbsolute, testcases);

@@ -1,6 +1,5 @@
 'use strict';
 
-var fs = require('fs');
 var os = require('os');
 var path = require('../');
 var resolve = require('path').resolve;
@@ -12,7 +11,9 @@ if (os.platform() === 'win32') {
   process.chdir(process.cwd());
 
   cwdPaths = process.cwd().replace(/(^\\\\|\\\\$)/, '').split('\\');
-  cwdPaths = cwdPaths.filter(function(s) { return !!s; });
+  cwdPaths = cwdPaths.filter(function(s) {
+    return !!s;
+  });
 
   currentDrive = cwdPaths.shift();
   if (currentDrive === 'D:') {
@@ -20,7 +21,9 @@ if (os.platform() === 'win32') {
   }
 } else {
   cwdPaths = process.cwd().replace(/(^\/|\/$)/, '').split('/');
-  cwdPaths = cwdPaths.filter(function(s) { return !!s; });
+  cwdPaths = cwdPaths.filter(function(s) {
+    return !!s;
+  });
 }
 
 function repeat(s, n) {

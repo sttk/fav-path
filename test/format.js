@@ -286,13 +286,13 @@ var testcases = [
   },
 ];
 
-function testfn_path_format(testcase) {
+function testfnPathFormat(testcase) {
   return path.format(testcase.pathObj);
 }
 
-function testfn_format(testcase) {
+function testfnFormat(testcase) {
   return format(testcase.pathObj);
 }
 
-testrun('#format (path.format)', testfn_path_format, testcases);
-testrun('#format (format)', testfn_format, testcases);
+testrun('#format (path.format)', testfnPathFormat, testcases);
+testrun('#format (format)', testfnFormat, testcases);

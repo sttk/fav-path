@@ -2,7 +2,6 @@
 
 var testrun = require('testrun').mocha;
 var path = require('../');
-var os = require('os');
 var sep = require('path').sep;
 
 var currentPaths = process.cwd().split(sep);
@@ -20,107 +19,107 @@ testrun('#resovle', testfn, [
     cases: [
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ null ],
+        paths: [null],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', null ],
+        paths: ['a', null],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', null ],
+        paths: ['a', 'b', null],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ undefined ],
+        paths: [undefined],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', undefined ],
+        paths: ['a', undefined],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', undefined ],
+        paths: ['a', 'b', undefined],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 123 ],
+        paths: [123],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 123 ],
+        paths: ['a', 123],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', 123 ],
+        paths: ['a', 'b', 123],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ true ],
+        paths: [true],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', true ],
+        paths: ['a', true],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', true ],
+        paths: ['a', 'b', true],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ false ],
+        paths: [false],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', false ],
+        paths: ['a', false],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', false ],
+        paths: ['a', 'b', false],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ [] ],
+        paths: [[]],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', [] ],
+        paths: ['a', []],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', [] ],
+        paths: ['a', 'b', []],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ {} ],
+        paths: [{}],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', {} ],
+        paths: ['a', {}],
         error: TypeError,
       },
       {
         name: 'And path is ${testcase.paths} => ${testcase.error}',
-        paths: [ 'a', 'b', {} ],
+        paths: ['a', 'b', {}],
         error: TypeError,
       },
     ],
@@ -136,188 +135,188 @@ testrun('#resovle', testfn, [
     ],
   },
   {
-    name: 'When passing an argument', 
+    name: 'When passing an argument',
     cases: [
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '' ],
+        paths: [''],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/' ],
+        paths: ['/'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '//' ],
+        paths: ['//'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '///' ],
+        paths: ['///'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '.' ],
+        paths: ['.'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '..' ],
+        paths: ['..'],
         expected: currentRoot + currentPaths.slice(0, -1).join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '...' ],
+        paths: ['...'],
         expected: currentRoot + currentPaths.join(sep) + sep + '...',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ './././' ],
+        paths: ['./././'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ './/.///.////' ],
+        paths: ['.//.///.////'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '//.///.////' ],
+        paths: ['//.///.////'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a' ],
+        paths: ['a'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/' ],
+        paths: ['a/'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a//' ],
+        paths: ['a//'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/.' ],
+        paths: ['a/.'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/b' ],
+        paths: ['a/b'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/b/' ],
+        paths: ['a/b/'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a//b' ],
+        paths: ['a//b'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a//b/' ],
+        paths: ['a//b/'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a//b//' ],
+        paths: ['a//b//'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/b/.' ],
+        paths: ['a/b/.'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/b/./' ],
+        paths: ['a/b/./'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a' ],
+        paths: ['/a'],
         expected: currentRoot + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '//a' ],
+        paths: ['//a'],
         expected: currentRoot + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/./a' ],
+        paths: ['/./a'],
         expected: currentRoot + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/' ],
+        paths: ['/a/'],
         expected: currentRoot + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/.' ],
+        paths: ['/a/.'],
         expected: currentRoot + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/b' ],
+        paths: ['/a/b'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/b/' ],
+        paths: ['/a/b/'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/./b' ],
+        paths: ['/a/./b'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/./a/b' ],
+        paths: ['/./a/b'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/a/b/.' ],
+        paths: ['/a/b/.'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '//a///b////.' ],
+        paths: ['//a///b////.'],
         expected: currentRoot + 'a' + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '../..' ], 
+        paths: ['../..'],
         expected: currentRoot + currentPaths.slice(0, -2).join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '../../..' ], 
+        paths: ['../../..'],
         expected: currentRoot + currentPaths.slice(0, -3).join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '..///.///..//..' ], 
+        paths: ['..///.///..//..'],
         expected: currentRoot + currentPaths.slice(0, -3).join(sep),
       },
     ],
@@ -327,102 +326,102 @@ testrun('#resovle', testfn, [
     cases: [
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '', '' ],
+        paths: ['', ''],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '.', '' ],
+        paths: ['.', ''],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '', '.' ],
+        paths: ['', '.'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '.', '.' ],
+        paths: ['.', '.'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/', '' ],
+        paths: ['/', ''],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '', '/' ],
+        paths: ['', '/'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '/', '.' ],
+        paths: ['/', '.'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '.', '/' ],
+        paths: ['.', '/'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ './', './' ],
+        paths: ['./', './'],
         expected: currentRoot + currentPaths.join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '//', '///' ],
+        paths: ['//', '///'],
         expected: currentRoot,
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '..', '..' ],
+        paths: ['..', '..'],
         expected: currentRoot + currentPaths.slice(0, -2).join(sep),
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '...', '...' ],
+        paths: ['...', '...'],
         expected: currentRoot + currentPaths.join(sep) + sep + '...' +
           sep + '...',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a', '' ],
+        paths: ['a', ''],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ '', 'b' ],
+        paths: ['', 'b'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a', 'b' ],
+        paths: ['a', 'b'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/', 'b/' ],
+        paths: ['a/', 'b/'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a///', 'b/.//./' ],
+        paths: ['a///', 'b/.//./'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ './//a///', '././/./b/.//./' ],
+        paths: ['.///a///', '././/./b/.//./'],
         expected: currentRoot + currentPaths.join(sep) + sep + 'a' +
           sep + 'b',
       },
       {
         name: 'And ${testcase.paths} => ${testcase.expected}',
-        paths: [ 'a/b/c', 'd/e' ],
+        paths: ['a/b/c', 'd/e'],
         expected: currentRoot + currentPaths.join(sep) + sep +
           ['a', 'b', 'c', 'd', 'e'].join(sep),
       },
@@ -436,7 +435,7 @@ testrun('#resovle', testfn, [
         cases: [
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\' ],
+            paths: ['\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep,
               otherwise: sep + currentPaths.join(sep) + sep + '\\',
@@ -444,7 +443,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\\\' ],
+            paths: ['\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep,
               otherwise: sep + currentPaths.join(sep) + sep + '\\\\',
@@ -452,7 +451,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\\\\\' ],
+            paths: ['\\\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep,
               otherwise: sep + currentPaths.join(sep) + sep + '\\\\\\',
@@ -460,7 +459,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '.\\.\\.\\' ],
+            paths: ['.\\.\\.\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep),
               otherwise: sep + currentPaths.join(sep) + sep + '.\\.\\.\\',
@@ -468,7 +467,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '.\\\\.\\\\\\.\\\\\\\\' ],
+            paths: ['.\\\\.\\\\\\.\\\\\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep),
               otherwise: sep + currentPaths.join(sep) + sep +
@@ -477,7 +476,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\\\.\\\\\\.\\\\\\\\' ],
+            paths: ['\\\\.\\\\\\.\\\\\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep,
               otherwise: sep + currentPaths.join(sep) + sep +
@@ -486,7 +485,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\' ],
+            paths: ['a\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + 'a\\',
@@ -494,7 +493,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\\\' ],
+            paths: ['a\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + 'a\\\\',
@@ -502,7 +501,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\.' ],
+            paths: ['a\\.'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + 'a\\.',
@@ -510,7 +509,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\b' ],
+            paths: ['a\\b'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -519,7 +518,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\b\\' ],
+            paths: ['a\\b\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -528,7 +527,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\\\b' ],
+            paths: ['a\\\\b'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -537,7 +536,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\\\b\\' ],
+            paths: ['a\\\\b\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -546,7 +545,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\\\b\\\\' ],
+            paths: ['a\\\\b\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -555,7 +554,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\b\\.' ],
+            paths: ['a\\b\\.'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -564,7 +563,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ 'a\\b\\.\\' ],
+            paths: ['a\\b\\.\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.join(sep) + sep + 'a' +
                 sep + 'b',
@@ -573,7 +572,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a' ],
+            paths: ['\\a'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a',
@@ -581,7 +580,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\\\a' ],
+            paths: ['\\\\a'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + '\\\\a',
@@ -589,7 +588,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\.\\a' ],
+            paths: ['\\.\\a'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + '\\.\\a',
@@ -597,7 +596,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\' ],
+            paths: ['\\a\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\',
@@ -605,7 +604,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\.' ],
+            paths: ['\\a\\.'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\.',
@@ -613,7 +612,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\b' ],
+            paths: ['\\a\\b'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\b',
@@ -621,7 +620,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\b\\' ],
+            paths: ['\\a\\b\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\b\\',
@@ -629,7 +628,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\.\\b' ],
+            paths: ['\\a\\.\\b'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\.\\b',
@@ -637,7 +636,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\.\\a\\b' ],
+            paths: ['\\.\\a\\b'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep + '\\.\\a\\b',
@@ -645,7 +644,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\a\\b\\.' ],
+            paths: ['\\a\\b\\.'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep + '\\a\\b\\.',
@@ -653,7 +652,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '\\\\a\\\\\\b\\\\\\\\.' ],
+            paths: ['\\\\a\\\\\\b\\\\\\\\.'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + 'a' + sep + 'b',
               otherwise: sep + currentPaths.join(sep) + sep +
@@ -662,7 +661,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '..\\..' ], 
+            paths: ['..\\..'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.slice(0, -2).join(sep),
               otherwise: sep + currentPaths.join(sep) + sep + '..\\..',
@@ -670,7 +669,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '..\\..\\..' ], 
+            paths: ['..\\..\\..'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.slice(0, -3).join(sep),
               otherwise: sep + currentPaths.join(sep) + sep + '..\\..\\..',
@@ -678,7 +677,7 @@ testrun('#resovle', testfn, [
           },
           {
             name: 'And ${testcase.paths} => ${testcase.expected}',
-            paths: [ '..\\\\\\.\\\\..\\\\..' ], 
+            paths: ['..\\\\\\.\\\\..\\\\..'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentPaths.slice(0, -3).join(sep),
               otherwise: sep + currentPaths.join(sep) + sep +
@@ -840,7 +839,7 @@ testrun('#resovle', testfn, [
             paths: ['\\' + currentDrive + '\\\\'],
             expected: testrun.byPlatform({
               win32: currentDrive + sep + currentDrive,
-              otherwise: sep + currentPaths.join(sep) + sep + '\\' + 
+              otherwise: sep + currentPaths.join(sep) + sep + '\\' +
                 currentDrive + '\\\\',
             }),
           },
